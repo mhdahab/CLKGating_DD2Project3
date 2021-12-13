@@ -1,7 +1,5 @@
 `define FUNCTIONAL
 `define UNIT_DELAY #1
-`include "primitives.v"
-`include "sky130_fd_sc_hd.v"
 module tb;
 reg CLK,EN;
 reg [31:0] D_IN;
@@ -10,8 +8,8 @@ wire [31:0] D_OUT;
 test32bit x (D_IN,CLK,EN,D_OUT);
 
 initial begin
-$dumpfile("test_updated.vcd"); // vcd dump file
-$dumpvars; // dump everything
+	$dumpfile("test_updated.vcd"); // vcd dump file
+	$dumpvars; // dump everything
 end 
 
  initial begin 
