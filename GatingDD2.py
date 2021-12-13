@@ -90,7 +90,7 @@ def clkgating(inputfilename,clockname):
                         inv_name="_inv"+str(print_inv)+"_"
                         print_inv-=1
                         sky+=1
-                        outputfile.write("  sky130_fd_sc_hd__inv_"+str(sky)+"_ (" +'\n')
+                        outputfile.write("  sky130_fd_sc_hd__inv_1 _"+str(sky)+"_ (" +'\n')
                         outputfile.write("   .A("+input[0]+")," +'\n')
                         outputfile.write("   .Y("+str(inv_name)+")" +'\n')
                         outputfile.write("  );" +'\n')
@@ -120,6 +120,7 @@ def clkgating(inputfilename,clockname):
                 outputfile.write("   .GATE("+enable+")" +'\n')
                 outputfile.write("  );" +'\n')
                 clkprinting-=1
+
          elif((i.find("sky130_fd_sc_hd__dfxtp")!=-1)):
             for j in inputfile:
                 done=True
@@ -189,9 +190,6 @@ def clkgating(inputfilename,clockname):
                 name="_g"+clockname+str(wire)+"_ ;"
                 wire_count-=1
                 outputfile.write("  wire "+name+'\n')
-            if(create_inv>0):
-                outputfile.write("  wire _inv"+str(create_inv)+"_ ;"+'\n')
-                create_inv-=1
         elif(i.find("sky130_fd_sc_hd__mux2")!=-1):
             for j in inputfile:
                 done=True
@@ -226,6 +224,7 @@ def clkgating(inputfilename,clockname):
                 outputfile.write("   .GATE("+enable+")" +'\n')
                 outputfile.write("  );" +'\n')
                 clkprinting-=1
+
         elif((i.find("sky130_fd_sc_hd__dfxtp")!=-1)):
             for j in inputfile:
                 done=True

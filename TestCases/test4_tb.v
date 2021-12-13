@@ -1,7 +1,5 @@
 `define FUNCTIONAL
 `define UNIT_DELAY #1
-`include "primitives.v"
-`include "sky130_fd_sc_hd.v"
 module tb;
 reg CLK,EN;
 reg [3:0] D_IN;

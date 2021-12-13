@@ -13,22 +13,22 @@ module test4bit(D_IN, CLK, EN, D_OUT);
    .CLK(CLK),
    .GATE(EN)
   );
-    sky130_fd_sc_hd__dfxtp_1 _02_ (
+  sky130_fd_sc_hd__dfxtp_1 _02_ (
    .CLK(_gCLK0_),
    .D(D_IN[0]),
    .Q(D_OUT[0])
   );
-    sky130_fd_sc_hd__dfxtp_1 _03_ (
+  sky130_fd_sc_hd__dfxtp_1 _03_ (
    .CLK(_gCLK0_),
    .D(D_IN[1]),
    .Q(D_OUT[1])
   );
-    sky130_fd_sc_hd__dfxtp_1 _14_ (
+  sky130_fd_sc_hd__dfxtp_1 _14_ (
    .CLK(_gCLK0_),
    .D(D_IN[2]),
    .Q(D_OUT[2])
   );
-    sky130_fd_sc_hd__dfxtp_1 _15_ (
+  sky130_fd_sc_hd__dfxtp_1 _15_ (
    .CLK(_gCLK0_),
    .D(D_IN[3]),
    .Q(D_OUT[3])
