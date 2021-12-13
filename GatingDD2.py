@@ -55,8 +55,6 @@ def clkgating(inputfilename,clockname):
     inputfile=open(inputfilename,"r+")
     outputfile_name = inputfilename.replace(".gl.v",".gated.v")
     outputfile= open(outputfile_name,'w+')
-    outputfile.write("`include \"primitives.v\""+'\n')
-    outputfile.write("`include \"sky130_hd.v\""+'\n')
     if(unique ==0 or reg):
         unique+=1
     wire_count=unique
